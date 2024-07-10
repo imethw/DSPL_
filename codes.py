@@ -60,6 +60,7 @@ charts_info = [
     {"type": "scatter", "x": "Market", "y": "Profit", "title": "Scatter Plot"},
     {"type": "density_heatmap", "x": "Country", "y": "Sales", "title": "Heatmap of Top 10 Countries in Sales", "color_scale": "reds"}
 ]
+
 index = 0
 while index < len(charts_info):
     info = charts_info[index]
@@ -84,5 +85,6 @@ while index < len(charts_info):
         st.error(f"Error creating {info['title']}: {e}")
     index += 1
 
-# Closing the bordered container
+# Closing bordered container
+
 st.markdown("</div>", unsafe_allow_html=True)
