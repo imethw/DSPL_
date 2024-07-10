@@ -76,5 +76,5 @@ nfo["type"])(df_top_10_countries, x=info.get("x", None), y=info.get("y", None),
             fig = getattr(px, info["type"])(sales_data, 
     , names=info.get("names", None), title=info.get("title", None), hole=info.get("hole", 0.5))
         elif info["type"] == 
-histogram":
+"histogram":
             fig = getattr(px, info["type"])(sales_data, x=info.get("x", None), title=info.get("title", None), color_discrete_sequence=["yellow"])
