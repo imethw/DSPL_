@@ -32,3 +32,4 @@ st.markdown(
     unsafe_allow_html=True
 )
 
+# Border container for the entire dashboard
