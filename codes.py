@@ -83,7 +83,7 @@ nfo["type"])(df_top_10_countries, x=info.get("x", None), y=info.get("y", None),
 elif info["type"] == "scatter":
             fig = getattr(px, info["type"])(sales_data, x=info.get("x", None), y=info.get("y", None), title=info.get("title", None), color_discrete_sequence=["red"])
 else:  # This will show Bar chart type
-
+fig = getattr(px, info["type"])(sales_data, x=info.get("x", None), y=info.get("y", None), 
 
 
 
