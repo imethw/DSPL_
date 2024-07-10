@@ -68,7 +68,8 @@ if info["type"] == "density_heatmap":
 sales_by_country = sales_data.= sales_data.groupby('Country')['Sales'].sum().reset_index()
             top_
   top_10_countries = sales_by_country.nlargest(10, 'Sales')
-
+df_top_10_countries = sales_data[sales_data['Country'].isin(top_10_countries['Country'])]
+            fig = getattr(px, 
 
 
     
