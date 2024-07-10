@@ -86,6 +86,6 @@ while index < len(charts_info):
 
 # Closing the bordered container
 st.markdown("</div>", 
-
+unsafe_allow_html=True)
 
 
