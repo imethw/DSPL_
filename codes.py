@@ -47,3 +47,11 @@ charts_info = [
     {"type": "scatter", "x": "Market", "y": "Profit", "title": "Scatter Plot"},
     {"type": "density_heatmap", "x": "Country", "y": "Sales", "title": "Heatmap of Top 10 Countries in Sales", "color_scale": "reds"}
 ]
+
+for info in charts_info:
+    if "type" in info:
+        if info["type"] == "density_heatmap":
+            sales_by_country = sales_data.groupby('Country')['Sales'].sum().reset_index()
+            top_10_countries = sales_by_country.nlargest(10, 'Sales')
+            df_top_10_countries = sales_data[sales_data['Country'].isin(top_10_countries['Country'])]
+            fig = getattr(px, info["type"])(df_top_10_countries, x=info.get("x", None), y=info.get("y", None)
