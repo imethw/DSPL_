@@ -61,6 +61,8 @@ charts_info = [
     {"type": "density_heatmap", "x": "Country", "y": "Sales", "title": "Heatmap of Top 10 Countries in Sales", "color_scale": "reds"}
 ]
 index = 0
+0
+while index < len(charts_info):
 
 
 
