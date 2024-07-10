@@ -51,3 +51,6 @@ except Exception as e:
     st.error(f"Error loading dataset: {e}")
 
 # Creating charts to represent in the dashboard
+
+charts_info = [
+    {"type": "box", "x": "Sub-Category", "y": "Quantity", "title": "Box Plot", "color": "green"},
