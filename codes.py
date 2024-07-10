@@ -64,6 +64,7 @@ index = 0
 while index < len(charts_info):
   info = charts_info[index]
     try:
+if info["type"] == "density_heatmap":
 
 
 
