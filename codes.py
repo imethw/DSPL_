@@ -82,7 +82,7 @@ while index < len(charts_info):
         st.plotly_chart(fig, use_container_width=True)
     except Exception as e:
         st.error(f"Error creating {info['title']}: {e}")
-    index += 5
+    index += 1
 
 
 
