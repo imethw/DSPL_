@@ -59,7 +59,7 @@ charts_info = [
 {"type": "histogram", "x": "Region", "title": "Histogram"},
     {"type": "scatter", "x": "Market", "y": "Profit", "title": "Scatter Plot"},
 {"type": "density_heatmap", "x": "Country", "y": "Sales", "title": "Heatmap of Top 10 Countries in Sales", "color_scale": "reds"}
-
+]
 
 
 
