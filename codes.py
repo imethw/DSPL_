@@ -61,7 +61,7 @@ for info in charts_info:
         else:
             fig = getattr(px, info["type"])(sales_data, x=info.get("x", None), y=info.get("y", None), title=info.get("title", None))
         st.plotly_chart(fig, use_container_width=True)
-    else:
+    else: "scatter plot"
         st.write("Invalid chart info: ", info)
 # Closing bordered container
 st.markdown("</div>", unsafe_allow_html=True)
