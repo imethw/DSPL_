@@ -72,5 +72,6 @@ df_top_10_countries = sales_data[sales_data['Country'].isin(top_10_countries['Co
             fig = getattr(px, 
 nfo["type"])(df_top_10_countries, x=info.get("x", None), y=info.get("y", None), 
 , title=info.get("title", None), color_continuous_scale=info.get("color_scale", None))
-
+  elif info["type"] == "pie":
+            fig = getattr(px, info["type"])(sales_data, 
     
