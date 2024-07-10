@@ -62,33 +62,28 @@ charts_info = [
 ]
 index = 0
 while index < len(charts_info):
-  info = charts_info[index]
+    info = charts_info[index]
     try:
-if info["type"] == "density_heatmap":
-sales_by_country = sales_data.= sales_data.groupby('Country')['Sales'].sum().reset_index()
-            top_
-  top_10_countries = sales_by_country.nlargest(10, 'Sales')
-df_top_10_countries = sales_data[sales_data['Country'].isin(top_10_countries['Country'])]
-            fig = getattr(px, 
-nfo["type"])(df_top_10_countries, x=info.get("x", None), y=info.get("y", None), 
-, title=info.get("title", None), color_continuous_scale=info.get("color_scale", None))
-  elif info["type"] == "pie":
-            fig = getattr(px, info["type"])(sales_data, 
-    , names=info.get("names", None), title=info.get("title", None), hole=info.get("hole", 0.5))
-        elif info["type"] == 
-"histogram":
+        if info["type"] == "density_heatmap":
+            sales_by_country = sales_data.groupby('Country')['Sales'].sum().reset_index()
+            top_10_countries = sales_by_country.nlargest(10, 'Sales')
+            df_top_10_countries = sales_data[sales_data['Country'].isin(top_10_countries['Country'])]
+            fig = getattr(px, info["type"])(df_top_10_countries, x=info.get("x", None), y=info.get("y", None), title=info.get("title", None), color_continuous_scale=info.get("color_scale", None))
+        elif info["type"] == "pie":
+            fig = getattr(px, info["type"])(sales_data, names=info.get("names", None), title=info.get("title", None), hole=info.get("hole", 0.5))
+        elif info["type"] == "histogram":
             fig = getattr(px, info["type"])(sales_data, x=info.get("x", None), title=info.get("title", None), color_discrete_sequence=["yellow"])
-   elif info["type"] == "box":
+        elif info["type"] == "box":
             fig = getattr(px, info["type"])(sales_data, x=info.get("x", None), y=info.get("y", None), title=info.get("title", None), color_discrete_sequence=["purple"])
-elif info["type"] == "scatter":
+        elif info["type"] == "scatter":
             fig = getattr(px, info["type"])(sales_data, x=info.get("x", None), y=info.get("y", None), title=info.get("title", None), color_discrete_sequence=["red"])
-else:  # This will show Bar chart type
-fig = getattr(px, info["type"])(sales_data, x=info.get("x", None), y=info.get("y", None), 
-title=info.get("title", None), color_discrete_sequence=["blue"])
+        else:  # This will show Bar chart type
+            fig = getattr(px, info["type"])(sales_data, x=info.get("x", None), y=info.get("y", None), title=info.get("title", None), color_discrete_sequence=["blue"])
         st.plotly_chart(fig, use_container_width=True)
     except Exception as e:
         st.error(f"Error creating {info['title']}: {e}")
     index += 1
+
 
 
 
