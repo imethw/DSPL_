@@ -48,7 +48,7 @@ except Exception as e:
 # Creating charts to represent in the dashboard
 charts_info = [
     {"type": "box", "x": "Sub-Category", "y": "Quantity", "title": "Box Plot", "color": "green"},
-    {"type": "bar", "x": "Ship Mode", "y": "Shipping Cost", "title": "Bar Chart", "color": "#339933"},
+    {"type": "bar", "x": "Ship Mode", "y": "Shipping Cost", "title": "Bar Chart", "color": "#eba434"},
     {"type": "pie", "names": "Order Priority", "title": "Donut Chart", "hole": 0.5},
     {"type": "histogram", "x": "Region", "title": "Histogram"},
     {"type": "scatter", "x": "Market", "y": "Profit", "title": "Scatter Plot"},
@@ -67,9 +67,13 @@ while index < len(charts_info):
         elif info["type"] == "pie":
             fig = getattr(px, info["type"])(sales_data, names=info.get("names", None), title=info.get("title", None), hole=info.get("hole", 0.5))
         elif info["type"] == "histogram":
-            fig = getattr(px, info["type"])(sales_data, x=info.get("x", None), title=info.get("title", None))
-        else:
-            fig = getattr(px, info["type"])(sales_data, x=info.get("x", None), y=info.get("y", None), title=info.get("title", None))
+            fig = getattr(px, info["type"])(sales_data, x=info.get("x", None), title=info.get("title", None), color_discrete_sequence=["yellow"])
+        elif info["type"] == "box":
+            fig = getattr(px, info["type"])(sales_data, x=info.get("x", None), y=info.get("y", None), title=info.get("title", None), color_discrete_sequence=["purple"])
+        elif info["type"] == "scatter":
+            fig = getattr(px, info["type"])(sales_data, x=info.get("x", None), y=info.get("y", None), title=info.get("title", None), color_discrete_sequence=["red"])
+        else:  # This will show Bar chart type
+            fig = getattr(px, info["type"])(sales_data, x=info.get("x", None), y=info.get("y", None), title=info.get("title", None), color_discrete_sequence=["blue"])
         st.plotly_chart(fig, use_container_width=True)
     except Exception as e:
         st.error(f"Error creating {info['title']}: {e}")
