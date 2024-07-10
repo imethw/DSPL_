@@ -56,6 +56,8 @@ charts_info = [
     {"type": "box", "x": "Sub-Category", "y": "Quantity", "title": "Box Plot", "color": "green"},
 {"type": "bar", "x": "Ship Mode", "y": "Shipping Cost", "title": "Bar Chart", "color": "#eba434"},
 {"type": "pie", "names": "Order Priority", "title": "Donut Chart", "hole": 0.5},
+{"type": "histogram", "x": "Region", "title": "Histogram"},
+    {"type": "scatter", "x": "Market", "y": "Profit", "title": "Scatter Plot"},
 
 
 
