@@ -10,3 +10,6 @@ st.set_page_config(
 )
 
 # Customized CSS inorder to style the dashboard
+st.markdown(
+    """
+    <style>
