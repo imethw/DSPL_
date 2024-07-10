@@ -84,7 +84,7 @@ while index < len(charts_info):
         st.error(f"Error creating {info['title']}: {e}")
     index += 1
 
-# Closing the bordered container st.markdown
+# Closing the bordered container
 
 
 
