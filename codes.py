@@ -9,3 +9,4 @@ st.set_page_config(
     layout="wide"
 )
 
+# Customized CSS inorder to style the dashboard
