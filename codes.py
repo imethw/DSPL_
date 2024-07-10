@@ -74,4 +74,5 @@ nfo["type"])(df_top_10_countries, x=info.get("x", None), y=info.get("y", None),
 , title=info.get("title", None), color_continuous_scale=info.get("color_scale", None))
   elif info["type"] == "pie":
             fig = getattr(px, info["type"])(sales_data, 
-    
+    , names=info.get("names", None), title=info.get("title", None), hole=info.get("hole", 0.5))
+        elif info["type"] == 
