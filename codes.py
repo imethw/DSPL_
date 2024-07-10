@@ -3,6 +3,7 @@ import streamlit as st
 import plotly.express as px
 
 # Setting page configuration
+
 st.set_page_config(
     page_title="Global Superstore",
     page_icon=":chart_with_upwards_trend:",
@@ -10,6 +11,7 @@ st.set_page_config(
 )
 
 # Customized CSS to style the dashboard
+
 st.markdown(
     """
     <style>
@@ -33,9 +35,11 @@ st.markdown(
 )
 
 # Border container for the entire dashboard
+
 st.markdown('<div class="bordered">', unsafe_allow_html=True)
 
 # Main header and subheader
+
 st.markdown('<div class="center header"><h1>Global Superstore Sales Dashboard<h1></div>', unsafe_allow_html=True)
 st.markdown('<div class="center subheader"><h3>Analysis of Sales Data<h3></div>', unsafe_allow_html=True)
 
