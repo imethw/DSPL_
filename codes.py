@@ -67,6 +67,7 @@ while index < len(charts_info):
 if info["type"] == "density_heatmap":
 sales_by_country = sales_data.= sales_data.groupby('Country')['Sales'].sum().reset_index()
             top_
+  top_10_countries = sales_by_country.nlargest(10, 'Sales')
 
 
 
