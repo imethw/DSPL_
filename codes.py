@@ -85,7 +85,7 @@ while index < len(charts_info):
     index += 1
 
 # Closing the bordered container
-
+st.markdown("</div>", 
 
 
 
