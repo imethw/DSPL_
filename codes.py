@@ -40,3 +40,9 @@ st.markdown('<div class="center header"><h1>Global Superstore Sales Dashboard<h1
 st.markdown('<div class="center subheader"><h3>Analysis of Sales Data<h3></div>', unsafe_allow_html=True)
 
 # Reading the data with exception handling
+
+try:
+    sales_data = pd.read_excel("cleaned_dataset.xlsx", engine='openpyxl')
+except Exception as e:
+    st.error(f"Error loading dataset: {e}")
+
