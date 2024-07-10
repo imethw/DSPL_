@@ -33,3 +33,5 @@ st.markdown(
 )
 
 # Border container for the entire dashboard
+st.markdown('<div class="bordered">', unsafe_allow_html=True)
+
