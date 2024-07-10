@@ -30,3 +30,9 @@ st.markdown(
     """,
     unsafe_allow_html=True
 )
+# Border container for the entire dashboard
+st.markdown('<div class="bordered">', unsafe_allow_html=True)
+
+# Main header and subheader
+st.markdown('<div class="center header"><h1>Global Superstore Sales Dashboard<h1></div>', unsafe_allow_html=True)
+st.markdown('<div class="center subheader"><h3>Analysis of Sales Data<h3></div>', unsafe_allow_html=True)
