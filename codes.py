@@ -70,6 +70,6 @@ sales_by_country = sales_data.= sales_data.groupby('Country')['Sales'].sum().res
   top_10_countries = sales_by_country.nlargest(10, 'Sales')
 df_top_10_countries = sales_data[sales_data['Country'].isin(top_10_countries['Country'])]
             fig = getattr(px, 
-
+nfo["type"])(df_top_10_countries, x=info.get("x", None), y=info.get("y", None), 
 
     
